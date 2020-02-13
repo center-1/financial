@@ -1,35 +1,46 @@
 html {
-  max-width: 1900px;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  width: 100%;
+  min-width: 900px;
+  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #fff;
 }
 body {
   min-height: 978px;
-  background: #000 url("../img/bg.jpg") no-repeat;
+  background: url("../img/bg.jpg") no-repeat;
 }
 .main-header {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  margin-bottom: 307px;
+  margin-bottom: 284px;
 }
 .main-header .logo {
   margin-top: 60px;
-  margin-left: 83px;
+  margin-left: 4.36842105%;
+  margin-right: 3%;
 }
 .main-menu {
   margin-top: 74px;
-  margin-right: 98px;
+  margin-right: 5.15789474%;
 }
 .user-menu {
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
   width: 872px;
   list-style: none;
+}
+.user-menu li {
+  margin-right: 60px;
 }
 .user-menu a {
   font-family: 'Montserrat', sans-serif;
@@ -45,6 +56,207 @@ body {
   padding: 0;
 }
 .promo {
+  position: relative;
   max-width: 684px;
   margin-left: 780px;
+  margin-bottom: 156px;
+}
+.promo .promo-slogan {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 64px;
+  color: #ffffff;
+}
+.promo h1 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 55px;
+  font-weight: 900;
+  line-height: 74px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.promo .promo-desc {
+  margin-bottom: 46px;
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
+}
+.promo .promo-button {
+  font-weight: 700;
+}
+.button {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #757575;
+  background-color: #fff;
+  border: none;
+  padding: 9px 51px 9px 38px;
+  border-radius: 21px;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 26px;
+  width: 11px;
+  height: 8px;
+  background: url("../img/arrow.png") no-repeat;
+}
+.slider-controls {
+  position: absolute;
+  top: 80px;
+  right: -2px;
+  font-size: 0;
+}
+.slider-controls label {
+  display: block;
+  width: 9px;
+  height: 8px;
+  margin-bottom: 8px;
+  background-color: #414141;
+  cursor: pointer;
+}
+.slider-controls label:active {
+  outline: 2px solid #a6a6a6;
+  outline-offset: -2px;
+}
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.planner {
+  display: -webkit-box;
+  display: flex;
+  min-height: 495px;
+  margin-bottom: 30px;
+}
+.planner-slogan {
+  width: 360px;
+  background: rgba(0, 150, 136, 0.91) url("../img/planner_bg.png") no-repeat;
+  padding: 113px 30px 10px 40px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.planner-slogan-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+}
+.planner-slogan-desc {
+  margin: 0;
+  margin-bottom: 130px;
+  font-family: 'Muli', sans-serif;
+  line-height: 24px;
+}
+.planer-button {
+  right: 60px;
+}
+.planner-aside {
+  width: 780px;
+  padding-top: 105px;
+  box-shadow: 0 4px 35px rgba(218, 218, 218, 0.77);
+  background-color: #ffffff;
+}
+.planner-aside ul {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  list-style: none;
+}
+.planner-aside ul li {
+  max-width: 340px;
+  margin-right: 40px;
+  padding-left: 70px;
+  padding-bottom: 15px;
+}
+.planner-aside ul li:first-child {
+  background: url("../img/shortcut_house.png") no-repeat 0 20px;
+}
+.planner-aside ul li:nth-child(2) {
+  background: url("../img/shortcut_thermometer.png") no-repeat 8px 20px;
+}
+.planner-aside ul li:nth-child(3) {
+  background: url("../img/shortcut_creative.png") no-repeat 0 20px;
+}
+.planner-aside ul li:last-child {
+  background: url("../img/shortcut_support.png") no-repeat 0 20px;
+}
+.planner-aside ul li:nth-child(2n) {
+  margin-right: 0;
+}
+.planner-aside-title {
+  padding-bottom: 7px;
+  color: #404040;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.planner-aside-desc {
+  font-family: 'Muli', sans-serif;
+}
+.advantage {
+  background: url("../img/man_advantage.jpg") no-repeat 200px 140px, url("../img/bg_advantage.png") no-repeat 237px 0px;
+  min-height: 735px;
+}
+.advantage-wrap {
+  margin-left: 360px;
+  padding-top: 80px;
+  padding-left: 27px;
+  padding-right: 38px;
+}
+.advantage-wrap .advantage-desc {
+  margin-bottom: 100px;
+}
+.expert {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: #009688;
+  margin-bottom: 100px;
+}
+.expert-wrap {
+  padding-left: 130px;
+  padding-right: 110px;
+}
+.expert-title {
+  margin: 0;
+  color: #fdfdfd;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 64px;
+  text-transform: uppercase;
+}
+.expert-desc {
+  padding-left: 80px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24.58px;
+  letter-spacing: 0.57px;
+}
+.expert .button-learn {
+  margin-left: 250px;
+}
+.expert .button-contact {
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 30px;
 }
